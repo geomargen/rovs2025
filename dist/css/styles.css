@@ -1659,7 +1659,7 @@ pre code {
 }
 .table th,
 .table td {
-  padding: 0.75rem;
+  padding: 0.3rem;
   vertical-align: top;
   border-top: 1px solid #dee2e6;
 }
@@ -1673,7 +1673,7 @@ pre code {
 
 .table-sm th,
 .table-sm td {
-  padding: 0.3rem;
+  padding: 0.15rem;
 }
 
 .table-bordered {
@@ -10141,3 +10141,49 @@ header.masthead h1 {
 .text-white-75 {
   color: rgba(255, 255, 255, 0.75);
 }
+
+
+#language-toggle {
+    border: none;
+    background: black;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+#language-toggle:hover {
+    text-decoration: underline;
+}
+
+.navbar-logo {
+    width: 30px;  /* Ajusta el tamaño del logo directamente */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 5px; /* Espacio entre el logo y el texto */
+    vertical-align: middle; /* Alinea la imagen con el texto */
+}
+
+
+/*Biografia de Massimo */
+
+/* Reduce el tamaño de la tipografía para el h4 */
+.bio-container h4 {
+    font-size: 12px;  /* Ajusta según necesites */
+}
+
+/* Reduce el tamaño de la tipografía de los párrafos de texto */
+.bio-container .bio-text {
+  text-align: left;
+    font-size: 12px;  /* Ajusta según necesites */
+}
+
+/* Si quieres reducir aún más los elementos de la lista */
+.bio-container .objectives-list li {
+    font-size: 12px;  /* Ajusta según necesites */
+}
+
+/* Para reducir el tamaño de los enlaces */
+.bio-container a {
+    font-size: 12px;  /* Ajusta según necesites */
+}
+
