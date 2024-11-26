@@ -10187,46 +10187,4 @@ header.masthead h1 {
     font-size: 14px;  /* Ajusta según necesites */
 }
 
-/* Aplica el fondo a .row.justify-content-center sin afectar el contenido */
-.row.justify-content-center {
-    position: relative; /* Necesario para posicionar el pseudo-elemento detrás del contenido */
-    z-index: 1; /* Asegura que el contenido esté encima de la imagen */
-    color: white; /* Asegura que el texto sea blanco */
-    padding: 50px 0; /* Espaciado dentro de la sección */
-    text-align: left; /* Alineación del texto */
-    line-height: 1.6; /* Espaciado de las líneas de texto */
-}
-
-/* Crear una capa para la imagen de fondo utilizando un pseudo-elemento */
-.row.justify-content-center::before {
-    content: ""; /* Necesario para crear el pseudo-elemento */
-    position: absolute; /* Coloca la capa en posición absoluta */
-    top: 0; left: 0; right: 0; bottom: 0; /* Cubre toda la sección */
-    background-image: url('img/puente_madero.jpg'); /* Ruta de tu imagen */
-    background-size: cover; /* Hace que la imagen cubra toda el área */
-    background-position: center; /* Centra la imagen */
-    background-attachment: fixed; /* Fija la imagen al hacer scroll */
-    filter: grayscale(100%); /* Aplica el filtro blanco y negro solo a la imagen */
-    z-index: -1; /* Coloca la capa detrás del contenido de la sección */
-}
-
-/* Aseguramos que los enlaces se mantengan visibles y legibles */
-.row.justify-content-center a {
-    color: inherit; /* Hereda el color blanco del texto */
-    text-decoration: none; /* Elimina el subrayado */
-    font-weight: bold; /* Hace que el enlace sea más visible */
-    border-bottom: 2px solid white; /* Cambia el color de la línea inferior a blanco */
-}
-
-/* Aseguramos que el contenido no se colapse y quede bien espaciado */
-.row.justify-content-center p,
-.row.justify-content-center ul {
-    color: white; /* Hace que el texto y los enlaces sean blancos para que resalten sobre el fondo */
-    margin: 10px 0; /* Añade margen entre los párrafos y listas para evitar que se colapsen */
-}
-
-/* Estilo adicional para los elementos de la lista */
-.row.justify-content-center ul {
-    padding-left: 20px; /* Añade espacio a la izquierda de las listas */
-}
 
