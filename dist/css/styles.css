@@ -10188,37 +10188,27 @@ header.masthead h1 {
 }
 
 
-
-/* Estilo para la sección de introducción con fondo */
-#Introduction {
-    position: relative; /* Necesario para colocar el pseudo-elemento correctamente */
-    padding: 50px 0; /* Espaciado dentro de la sección */
-    color: white; /* Asegura que el texto sea blanco para que contraste con el fondo oscuro */
-}
-
-/* Crear una capa para la imagen de fondo usando pseudo-elemento */
-#Introduction::before {
-    content: ""; /* Necesario para crear el pseudo-elemento */
-    position: absolute; /* Colocamos la capa en posición absoluta */
-    top: 0; left: 0; right: 0; bottom: 0; /* Cubre toda la sección */
-    background-image: url('img/puente_madero.jpg'); /* Cambia esto a la ruta de tu imagen */
-    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+/* Aplica el fondo directamente al div .row */
+.row.justify-content-center {
+    position: relative; /* Necesario para posicionar el pseudo-elemento detrás del contenido */
+    background-image: url('img/puente_madero.jpg'); /* Ruta de tu imagen */
+    background-size: cover; /* Hace que la imagen cubra toda el área */
     background-position: center; /* Centra la imagen */
     background-attachment: fixed; /* Fija la imagen al hacer scroll */
     filter: grayscale(100%); /* Aplica el filtro blanco y negro solo a la imagen */
-    z-index: -1; /* Coloca la capa detrás del contenido de la sección */
+    padding: 50px 0; /* Ajusta el espaciado dentro de la sección si lo necesitas */
+    color: white; /* Asegura que el texto sea blanco */
 }
 
-/* Estilo para los párrafos y listas dentro de la sección */
-#Introduction p, #Introduction ul {
-    text-align: left;
-    color: white; /* Hace que el texto sea blanco para que se lea sobre el fondo */
+.row.justify-content-center p,
+.row.justify-content-center ul,
+.row.justify-content-center a {
+    color: white; /* Asegura que el texto y los enlaces sean blancos para que resalten */
 }
 
 /* Estilo para los enlaces */
-#Introduction a {
-    color: inherit; /* Hereda el color blanco del texto */
-    text-decoration: none; /* Elimina el subrayado */
-    font-weight: bold; /* Hace que el enlace sea más visible */
-    border-bottom: 2px solid white; /* Cambia el color de la línea inferior a blanco */
+.row.justify-content-center a {
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid white;
 }
