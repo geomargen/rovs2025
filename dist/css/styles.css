@@ -10187,3 +10187,29 @@ header.masthead h1 {
     font-size: 14px;  /* Ajusta según necesites */
 }
 
+
+
+
+/* Agregar estilo a la sección con la imagen de fondo */
+#Introduction {
+    background-image: url('img/puente_madero.jpg'); /* Cambia esto por la ruta de tu imagen */
+    background-size: cover; /* Hace que la imagen cubra toda la sección */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Hace que la imagen permanezca fija al hacer scroll */
+    color: white; /* Cambia el color del texto a blanco para que resalte sobre el fondo oscuro */
+    filter: grayscale(100%); /* Aplica el filtro blanco y negro a la imagen */
+    padding: 50px 0; /* Agrega espacio dentro de la sección */
+}
+
+/* Asegúrate de que los elementos dentro de la sección también sean legibles */
+#Introduction p, #Introduction ul {
+    text-align: left;
+    color: white; /* Hace que el texto sea blanco para destacarse sobre el fondo */
+}
+
+#Introduction a {
+    color: inherit; /* Hereda el color blanco del texto */
+    text-decoration: none; /* Elimina el subrayado */
+    font-weight: bold; /* Hace que el enlace sea más visible */
+    border-bottom: 2px solid white; /* Cambia el color de la línea inferior a blanco */
+}
