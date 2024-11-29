@@ -10188,3 +10188,34 @@ header.masthead h1 {
 }
 
 
+
+
+.imagen-fondo {
+    position: absolute; /* Posiciona la imagen de manera absoluta dentro del contenedor */
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que la imagen ocupe todo el contenedor */
+    height: 400px; /* Establece la altura deseada */
+    border-radius: 50px; /* Bordes redondeados */
+    filter: grayscale(100%); /* Convierte la imagen a escala de grises */
+    opacity: 0.2; /* Ajusta la opacidad de la imagen */
+    z-index: -1; /* Asegura que la imagen esté detrás del texto */
+}
+
+.row {
+    position: relative; /* Hace que los elementos hijos posicionados de forma absoluta se ubiquen respecto a este contenedor */
+    padding-top: 50px; /* Añade un espacio para que no se solapen */
+    padding-bottom: 50px; /* Añade un espacio para que el texto no quede demasiado pegado */
+}
+
+.texto-con-imagen {
+    position: relative; /* Hace que el texto esté encima de la imagen */
+    z-index: 1; /* Hace que el texto esté por encima de la imagen */
+    color: #333; /* Asegura que el texto tenga un color visible */
+    padding: 20px;
+}
+
+.texto-con-imagen p, .texto-con-imagen ul {
+    font-size: 18px;
+}
+
