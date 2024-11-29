@@ -10071,7 +10071,58 @@ hr.light {
     color: #f4623a;
   }
 }
+/* */
+/* Estilos para el header */
+header.masthead {
+  padding-top: 10vh;  /* Usamos vh para hacer que el padding sea relativo a la altura de la pantalla */
+  padding-bottom: 10vh;  /* Lo mismo para el padding inferior */
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.3) 0%, rgba(92, 77, 66, 0.3) 100%), url("../assets/img/fondo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;  /* Asegura que la imagen cubra todo el contenedor */
+  background-attachment: scroll;  /* Usamos scroll por defecto */
+}
 
+header.masthead h1 {
+  font-size: 2.25rem;
+  color: white;  /* Asegúrate de que el texto sea legible sobre el fondo */
+}
+
+/* Media Queries */
+@media (min-width: 992px) {
+  header.masthead {
+    height: 65vh;  /* Usa vh para que la altura sea relativa al tamaño de la pantalla */
+    background-attachment: fixed;  /* Hacer que la imagen de fondo se quede fija */
+  }
+
+  header.masthead p {
+    font-size: 1.15rem;
+  }
+
+  header.masthead h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  header.masthead h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Media query para pantallas móviles */
+@media (max-width: 768px) {
+  header.masthead {
+    padding-top: 20vh;  /* Aumenta el padding superior en pantallas pequeñas */
+    padding-bottom: 20vh;  /* Aumenta el padding inferior en pantallas pequeñas */
+    background-attachment: scroll;  /* Desactiva el fondo fijo en pantallas pequeñas */
+  }
+
+  header.masthead h1 {
+    font-size: 2rem;  /* Ajusta el tamaño del texto en pantallas pequeñas */
+  }
+}
+/* 
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
@@ -10101,7 +10152,7 @@ header.masthead h1 {
     font-size: 3.5rem;
   }
 }
-
+*/
 #portfolio .container-fluid, #portfolio .container-sm, #portfolio .container-md, #portfolio .container-lg, #portfolio .container-xl {
   max-width: 1920px;
 }
