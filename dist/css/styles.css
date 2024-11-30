@@ -10353,6 +10353,7 @@ header.masthead h1 {
     max-width: 100%;
         display: flex;
     justify-content: center;  /* Centra el contenido horizontalmente */
+    align-items: center;  /* Centra el contenido verticalmente */
 }
 
 .responsive-video {
