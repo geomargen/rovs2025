@@ -10073,30 +10073,51 @@ hr.light {
 }
 /* */
 /* Estilos para el header */
+/* Estilo para el header */
 header.masthead {
-  position: relative;  /* Necesario para posicionar el fondo como pseudo-elemento */
-  padding-top: 10vh;   /* El padding sigue siendo relativo a la altura de la ventana */
+  position: relative; /* Necesario para posicionar el fondo como pseudo-elemento */
+  padding-top: 10vh;  /* El padding sigue siendo relativo a la altura de la ventana */
   padding-bottom: 10vh;
   background: linear-gradient(to bottom, rgba(92, 77, 66, 0.3) 0%, rgba(92, 77, 66, 0.3) 100%);
   overflow: hidden;  /* Evitar que el fondo sobresalga cuando se hace zoom */
-    z-index: 1; /*Garantiza que el texto sobre el fondo*/
+  z-index: 1; /* Asegura que el texto quede sobre el fondo */
+  width: 100%;  /* Asegura que el header ocupe todo el ancho de la página */
+  height: 100vh; /* Ocupa toda la altura del viewport */
+  display: flex; /* Para alinear el contenido */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
 }
 
+/* Estilo del pseudo-elemento para la imagen de fondo */
 header.masthead::before {
-  content: "";  /* Crea el pseudo-elemento */
-  position: absolute;  /* Posiciona el pseudo-elemento para que ocupe todo el contenedor */
+  content: ""; /* Crea el pseudo-elemento */
+  position: absolute; /* Posiciona el pseudo-elemento para que ocupe todo el contenedor */
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100%; /* Asegura que el fondo ocupe todo el espacio disponible */
   background: url("../assets/img/fondo.png") no-repeat center center;
-  background-size: cover;  /* Asegura que la imagen cubra el área sin deformarse */
-  z-index: -1;  /* Coloca la imagen de fondo detrás del contenido */
+  background-size: cover; /* Asegura que la imagen cubra el área sin deformarse */
+  z-index: -1; /* Coloca la imagen de fondo detrás del contenido */
 }
 
+/* Estilo para los títulos dentro del header */
 header.masthead h1 {
-  font-size: 2.25rem;
-  color: white;  /* Asegúrate de que el texto sea legible sobre el fondo */
+  font-size: 5vw; /* Usa una unidad relativa para hacerlo responsivo */
+  color: white;  /* Asegura que el texto sea legible sobre el fondo */
+  font-weight: bold; /* Hace que el texto se vea más prominente */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Añade sombra al texto para mejor contraste */
+  margin: 0; /* Elimina márgenes adicionales */
+  text-align: center; /* Centra el texto */
+  z-index: 1; /* Asegura que el texto se mantenga sobre el fondo */
+}
+
+/* Agregar un pequeño espaciado en la parte inferior del header */
+header.masthead p {
+  font-size: 1.25rem; /* Ajusta el tamaño de la fuente para el párrafo */
+  color: white;
+  margin-top: 20px;
+  text-align: center;
 }
 
 /* Media Queries */
