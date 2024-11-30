@@ -10121,35 +10121,59 @@ header.masthead p {
 }
 
 /* Media Queries */
+/* Media Queries para pantallas grandes */
 @media (min-width: 992px) {
   header.masthead {
-    height: 65vh;  /* Usa vh para que la altura sea relativa al tamaño de la pantalla */
+    height: 65vh;  /* Altura proporcional al tamaño de la pantalla */
     background-attachment: scroll;  /* Desactiva el fondo fijo en pantallas grandes para evitar problemas con el zoom */
   }
 
   header.masthead h1 {
-    font-size: 3rem;
+    font-size: 3rem; /* Ajuste del tamaño de fuente en pantallas grandes */
   }
 }
 
 @media (min-width: 1200px) {
   header.masthead h1 {
-    font-size: 3.5rem;
+    font-size: 3.5rem; /* Ajuste del tamaño de fuente en pantallas extra grandes */
   }
 }
 
-/* Media query para pantallas móviles */
+/* Media query para pantallas móviles y tabletas */
 @media (max-width: 768px) {
   header.masthead {
-    padding-top: 20vh;  /* Aumenta el padding superior en pantallas pequeñas */
-    padding-bottom: 20vh;  /* Aumenta el padding inferior en pantallas pequeñas */
+    padding-top: 10vh;  /* Aumenta el padding superior en pantallas pequeñas */
+    padding-bottom: 10vh;  /* Aumenta el padding inferior en pantallas pequeñas */
     background-attachment: scroll;  /* Desactiva el fondo fijo en pantallas pequeñas */
+    height: auto;  /* No se usa vh, ya que se ajustará automáticamente */
   }
 
   header.masthead h1 {
-    font-size: 2rem;  /* Ajusta el tamaño del texto en pantallas pequeñas */
+    font-size: 2.5rem;  /* Ajuste del tamaño de la fuente para mejor legibilidad en pantallas móviles */
+    margin-bottom: 10px; /* Añade espacio debajo del título para mayor separación */
+  }
+
+  /* Añadir márgenes en los textos para mejor espaciado */
+  header.masthead p {
+    font-size: 1.25rem;  /* Ajusta el tamaño del texto para dispositivos pequeños */
+    margin-top: 10px;
+    text-align: center;
   }
 }
+
+/* Media query para pantallas muy pequeñas (por ejemplo, smartphones en orientación vertical) */
+@media (max-width: 480px) {
+  header.masthead h1 {
+    font-size: 2rem;  /* Ajuste aún más pequeño para dispositivos muy pequeños */
+    margin-bottom: 8px;  /* Reducción de márgenes en pantallas muy pequeñas */
+  }
+
+  header.masthead p {
+    font-size: 1rem;  /* Ajuste de texto para pantallas muy pequeñas */
+    padding: 0 15px;   /* Espaciado adicional si es necesario */
+  }
+}
+
 /* 
 header.masthead {
   padding-top: 10rem;
