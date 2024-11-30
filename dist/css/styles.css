@@ -10337,6 +10337,6 @@ header.masthead h1 {
     left: 0;
     width: 100%;  /* El video ocupará todo el ancho disponible */
     height: 100%; /* El video se ajustará para mantener la relación de aspecto */
-     object-fit: cover; /* Ajusta el contenido del video para que cubra completamente el área del contenedor sin distorsión */
+     object-fit: contain; /* Ajusta el contenido del video para que cubra completamente el área del contenedor sin distorsión */
 }
 
