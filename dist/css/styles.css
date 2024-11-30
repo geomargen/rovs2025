@@ -10074,104 +10074,92 @@ hr.light {
 /* */
 /* Estilos para el header */
 /* Estilo para el header */
+/* Estilo general del header */
 header.masthead {
-  position: relative; /* Necesario para posicionar el fondo como pseudo-elemento */
-  padding-top: 10vh;  /* El padding sigue siendo relativo a la altura de la ventana */
-  padding-bottom: 10vh;
-  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.3) 0%, rgba(92, 77, 66, 0.3) 100%);
-  overflow: hidden;  /* Evitar que el fondo sobresalga cuando se hace zoom */
-  z-index: 1; /* Asegura que el texto quede sobre el fondo */
-  width: 100%;  /* Asegura que el header ocupe todo el ancho de la página */
-  height: 100vh; /* Ocupa toda la altura del viewport */
-  display: flex; /* Para alinear el contenido */
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
+    position: relative;
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.3) 0%, rgba(92, 77, 66, 0.3) 100%);
+    background-size: cover; /* Hace que la imagen de fondo cubra todo el espacio */
+    background-position: center;
+    height: 100vh; /* Asegura que el header ocupe toda la altura del viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px; /* Añade un pequeño padding para que el texto no toque los bordes */
+    overflow: hidden; /* Evita que el contenido se desborde */
 }
 
 /* Estilo del pseudo-elemento para la imagen de fondo */
 header.masthead::before {
-  content: ""; /* Crea el pseudo-elemento */
-  position: absolute; /* Posiciona el pseudo-elemento para que ocupe todo el contenedor */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; /* Asegura que el fondo ocupe todo el espacio disponible */
-  background: url("../assets/img/fondo.png") no-repeat center center;
-  background-size: cover; /* Asegura que la imagen cubra el área sin deformarse */
-  z-index: -1; /* Coloca la imagen de fondo detrás del contenido */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../assets/img/fondo.png") no-repeat center center;
+    background-size: cover;
+    z-index: -1;
 }
 
-/* Estilo para los títulos dentro del header */
+/* Títulos dentro del header */
 header.masthead h1 {
-  font-size: 5vw; /* Usa una unidad relativa para hacerlo responsivo */
-  color: white;  /* Asegura que el texto sea legible sobre el fondo */
-  font-weight: bold; /* Hace que el texto se vea más prominente */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Añade sombra al texto para mejor contraste */
-  margin: 0; /* Elimina márgenes adicionales */
-  text-align: center; /* Centra el texto */
-  z-index: 1; /* Asegura que el texto se mantenga sobre el fondo */
+    font-size: 5vw; /* Usa unidades relativas para el tamaño del texto */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para mejorar la legibilidad */
+    margin: 0;
+    z-index: 1; /* Asegura que el texto esté por encima del fondo */
+    line-height: 1.2;
 }
 
-/* Agregar un pequeño espaciado en la parte inferior del header */
-header.masthead p {
-  font-size: 1.25rem; /* Ajusta el tamaño de la fuente para el párrafo */
-  color: white;
-  margin-top: 20px;
-  text-align: center;
-}
-
-/* Media Queries */
-/* Media Queries para pantallas grandes */
+/* Ajuste de tamaños y espaciado en pantallas grandes */
 @media (min-width: 992px) {
-  header.masthead {
-    height: 65vh;  /* Altura proporcional al tamaño de la pantalla */
-    background-attachment: scroll;  /* Desactiva el fondo fijo en pantallas grandes para evitar problemas con el zoom */
-  }
+    header.masthead {
+        height: 65vh; /* Ajusta la altura para pantallas grandes */
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+    }
 
-  header.masthead h1 {
-    font-size: 3rem; /* Ajuste del tamaño de fuente en pantallas grandes */
-  }
+    header.masthead h1 {
+        font-size: 3rem; /* Ajuste de tamaño de texto en pantallas grandes */
+    }
 }
 
-@media (min-width: 1200px) {
-  header.masthead h1 {
-    font-size: 3.5rem; /* Ajuste del tamaño de fuente en pantallas extra grandes */
-  }
-}
-
-/* Media query para pantallas móviles y tabletas */
+/* Ajuste para pantallas más pequeñas */
 @media (max-width: 768px) {
-  header.masthead {
-    padding-top: 10vh;  /* Aumenta el padding superior en pantallas pequeñas */
-    padding-bottom: 10vh;  /* Aumenta el padding inferior en pantallas pequeñas */
-    background-attachment: scroll;  /* Desactiva el fondo fijo en pantallas pequeñas */
-    height: auto;  /* No se usa vh, ya que se ajustará automáticamente */
-  }
+    header.masthead {
+        padding-top: 5vh; /* Reduce el padding en pantallas más pequeñas */
+        padding-bottom: 5vh;
+        height: auto; /* El alto se ajustará automáticamente */
+    }
 
-  header.masthead h1 {
-    font-size: 2.5rem;  /* Ajuste del tamaño de la fuente para mejor legibilidad en pantallas móviles */
-    margin-bottom: 10px; /* Añade espacio debajo del título para mayor separación */
-  }
-
-  /* Añadir márgenes en los textos para mejor espaciado */
-  header.masthead p {
-    font-size: 1.25rem;  /* Ajusta el tamaño del texto para dispositivos pequeños */
-    margin-top: 10px;
-    text-align: center;
-  }
+    header.masthead h1 {
+        font-size: 6vw; /* Ajusta el tamaño de la fuente en pantallas móviles */
+    }
 }
 
-/* Media query para pantallas muy pequeñas (por ejemplo, smartphones en orientación vertical) */
+/* Ajustes para pantallas muy pequeñas (smartphones en orientación vertical) */
 @media (max-width: 480px) {
-  header.masthead h1 {
-    font-size: 2rem;  /* Ajuste aún más pequeño para dispositivos muy pequeños */
-    margin-bottom: 8px;  /* Reducción de márgenes en pantallas muy pequeñas */
-  }
+    header.masthead h1 {
+        font-size: 8vw; /* Ajusta aún más el tamaño para pantallas muy pequeñas */
+        margin-bottom: 10px; /* Reducción de márgenes */
+    }
+}
 
-  header.masthead p {
-    font-size: 1rem;  /* Ajuste de texto para pantallas muy pequeñas */
-    padding: 0 15px;   /* Espaciado adicional si es necesario */
-  }
+/* Párrafos dentro del header */
+header.masthead p {
+    font-size: 1.25rem; /* Ajusta el tamaño del texto */
+    margin-top: 20px;
+    z-index: 1; /* Asegura que el texto esté sobre el fondo */
+}
+
+/* Para evitar que el contenido sobrepase en pantallas pequeñas */
+@media (max-width: 480px) {
+    header.masthead p {
+        font-size: 1rem; /* Ajuste de texto en pantallas más pequeñas */
+        padding: 0 15px;
+    }
 }
 
 /* 
