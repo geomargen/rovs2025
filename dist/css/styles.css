@@ -10292,36 +10292,58 @@ header.masthead h1 {
 
 
 
-
+/*texto-responsivo  */
+/* Estilos para la imagen de fondo */
 .imagen-fondo {
     position: absolute; /* Posiciona la imagen de manera absoluta dentro del contenedor */
     top: 0;
     left: 0;
     width: 100%; /* Asegura que la imagen ocupe todo el contenedor */
-    height: 400px; /* Establece la altura deseada */
+    height: 100%; /* Hace que la altura de la imagen ocupe el 100% del contenedor */
+    object-fit: cover; /* Mantiene la relación de aspecto de la imagen y asegura que se cubra todo el área */
     border-radius: 50px; /* Bordes redondeados */
     filter: grayscale(100%); /* Convierte la imagen a escala de grises */
     opacity: 0.2; /* Ajusta la opacidad de la imagen */
     z-index: -1; /* Asegura que la imagen esté detrás del texto */
 }
 
-.row {
-    position: relative; /* Hace que los elementos hijos posicionados de forma absoluta se ubiquen respecto a este contenedor */
-    padding-top: 50px; /* Añade un espacio para que no se solapen */
-    padding-bottom: 50px; /* Añade un espacio para que el texto no quede demasiado pegado */
-}
-
+/* Estilos para el contenedor de texto */
 .texto-con-imagen {
     position: relative; /* Hace que el texto esté encima de la imagen */
     z-index: 1; /* Hace que el texto esté por encima de la imagen */
     color: #333; /* Asegura que el texto tenga un color visible */
     padding: 20px;
+    margin-top: 100px;  /* Espaciado superior si es necesario */
 }
 
-.texto-con-imagen p, .texto-con-imagen ul {
+/* Estilo para los párrafos y listas dentro del texto */
+.texto-con-imagen p, 
+.texto-con-imagen ul {
     font-size: 18px;
+    line-height: 1.6; /* Espaciado entre líneas para mayor legibilidad */
+    margin-bottom: 15px;
 }
 
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .texto-con-imagen p, 
+    .texto-con-imagen ul {
+        font-size: 16px; /* Ajusta el tamaño del texto en dispositivos pequeños */
+    }
+}
+
+/* Media query para pantallas grandes */
+@media (min-width: 992px) {
+    .texto-con-imagen p, 
+    .texto-con-imagen ul {
+        font-size: 20px; /* Ajuste del tamaño del texto en pantallas grandes */
+    }
+}
+
+/* Para el contenedor row */
+.row {
+    position: relative; /* Hace que los elementos hijos posicionados de forma absoluta se ubique
+/* */
 
 .video-container {
     position: relative;
