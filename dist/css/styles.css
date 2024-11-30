@@ -10351,6 +10351,8 @@ header.masthead h1 {
     height: 0;
     overflow: hidden;
     max-width: 100%;
+        display: flex;
+    justify-content: center;  /* Centra el contenido horizontalmente */
 }
 
 .responsive-video {
