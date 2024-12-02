@@ -10288,7 +10288,7 @@ header.masthead h1 {
     position: absolute; /* Posiciona la imagen de manera absoluta dentro del contenedor */
     top: 0;
     left: 0;
-    width: 100%; /* Asegura que la imagen ocupe todo el contenedor */
+    width: 80%; /* Asegura que la imagen ocupe todo el contenedor */
     height: 80%; /* Hace que la altura de la imagen ocupe el 100% del contenedor */
     object-fit: cover; /* Mantiene la relación de aspecto de la imagen y asegura que se cubra todo el área */
     border-radius: 50px; /* Bordes redondeados */
