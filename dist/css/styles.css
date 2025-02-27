@@ -8760,6 +8760,8 @@ button.bg-dark:focus {
     margin-right: auto !important;
   }
 
+
+
   .mb-md-auto,
 .my-md-auto {
     margin-bottom: auto !important;
@@ -10355,3 +10357,28 @@ header.masthead h1 {
      object-fit: contain; /* Ajusta el contenido del video para que cubra completamente el área del contenedor sin distorsión */
 }
 
+.program-day {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.program-day h3 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.program-day p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.note {
+    font-style: italic;
+    color: #888;
+    margin-top: 30px;
+}
